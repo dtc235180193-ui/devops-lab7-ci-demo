@@ -2,6 +2,7 @@
 .secrets/
 .env
 screenshots/
+evidence/
+ho_ten_mssv.txt
 *.zip
-scripts/Initialize-Services.ps1
-scripts/Configure-Jenkins.ps1
+scripts/

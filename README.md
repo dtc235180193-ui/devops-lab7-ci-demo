@@ -1,5 +1,7 @@
 # Lab 7 — Jenkins, Nexus and SonarQube
 
+Repository: https://github.com/dtc235180193-ui/devops-lab7-ci-demo
+
 ## Run
 
 ```powershell
@@ -38,3 +40,19 @@ docker compose down
 
 Do not add `-v` unless you explicitly want to delete all lab service data.
 Credentials under `.secrets/` are local-only: never commit or submit them.
+
+## This machine
+
+The Compose project name `lab7-jenkins-ci` deliberately reuses the existing lab
+volumes on this machine. Run Compose commands from this directory rather than
+the older copy under Documents, whose configuration exposes additional ports.
+Local administrator passwords are in `.secrets/credentials.json` (restricted
+to the current Windows user); usernames for all three services are `admin`.
+That file and local setup scripts are not part of the public repository or
+submission archive. Never run two copies of this stack simultaneously.
+
+Nexus Community 3.97 requires EULA acceptance before repository access and
+includes mandatory baseline telemetry. Complete its onboarding wizard before
+running the publish stage. The existing SonarQube 9.9.8 image on this machine
+is end-of-life and uses an embedded evaluation database: this stack is for the
+local lab only, not production or public exposure.
