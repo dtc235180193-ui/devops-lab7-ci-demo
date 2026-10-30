@@ -1,0 +1,7 @@
+**/target/
+.secrets/
+.env
+screenshots/
+*.zip
+scripts/Initialize-Services.ps1
+scripts/Configure-Jenkins.ps1
